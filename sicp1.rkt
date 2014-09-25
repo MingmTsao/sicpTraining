@@ -34,7 +34,8 @@
   (sqrt-iter 1.000))
 
 
-(define (cube x)(* x x x))
+(define (cube x)
+  (* x x x))
 (define (sum-cubes a b)
   (if (> a b)
       0
@@ -61,3 +62,10 @@
   (+ x 1))
 (define (dec x)
   (- x 1))
+;1.41
+(define (double go)
+  (lambda (x) (go (go x))))
+
+;1.42
+(define (compose fun1 fun2)
+  (lambda (x) (fun1 (fun2 x))))
